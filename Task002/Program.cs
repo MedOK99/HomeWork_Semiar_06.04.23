@@ -5,7 +5,7 @@
 
 [-4, -6, 89, 6] -> 0 */
 
- Console.Clear();
+Console.Clear();
 
 Console.WriteLine("Введите размер массива: ");
 int length = ReadNumberFromConsole();
@@ -15,10 +15,10 @@ Console.Write("Мы получили массив: ");
 PrintArray(numbers);
 int sum = 0;
 
-for (int n = 1; n < numbers.Length; n+=2)
-    sum = sum + numbers[n];
+for (int n = 1; n < numbers.Length; n += 2)
+  sum = sum + numbers[n];
 
-    Console.WriteLine($"всего в нём {numbers.Length} чисел, из которых сумма чисел на позициях с нечётным индексом = {sum}");
+Console.WriteLine($"всего в нём {numbers.Length} чисел, из которых сумма чисел на позициях с нечётным индексом = {sum}");
 
 int ReadNumberFromConsole()
 {
@@ -28,19 +28,20 @@ int ReadNumberFromConsole()
 
 void FillArrayRandomNumbers(int[] numbers)
 {
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            numbers[i] = new Random().Next(1,10);
-        }
+  for (int i = 0; i < numbers.Length; i++)
+  {
+    numbers[i] = new Random().Next(1, 10);
+  }
 }
+
 void PrintArray(int[] numbers)
 {
-    Console.Write("[ ");
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            Console.Write($"{numbers[i]} ");
-        }
-    Console.Write("]");
-    Console.WriteLine();
+  Console.Write("[ ");
+  for (int i = 0; i < numbers.Length; i++)
+  {
+    Console.Write($"{numbers[i]} ");
+  }
+  Console.Write("]");
+  Console.WriteLine();
 }
 
