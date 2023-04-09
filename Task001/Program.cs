@@ -23,13 +23,13 @@ for (int i = 0; i < array.Length; i++)
 }
 Console.WriteLine($"всего {array.Length} чисел, {count} из них чётные.");
 
-int ReadNumberFromConsole()
+int ReadNumberFromConsole()    // метод для считывания данных из консоли
 {
   string input = Console.ReadLine();
   return int.Parse(input);
 }
 
-void PrintArray(int[] array)
+void PrintArray(int[] array)   // метод для вывода на печать массива
 {
   Console.Write("{");
 
@@ -41,7 +41,7 @@ void PrintArray(int[] array)
   Console.WriteLine();
 }
 
-void NewArray(int[] array)
+void NewArray(int[] array)   //  метод для заполнения массива случайными числами
 {
   for (int i = 0; i < array.Length; i++)
   {
