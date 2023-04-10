@@ -58,3 +58,56 @@ void PrintArray(double[] array)   // метод для вывода на печ�
 }
 
 
+//  Решение с целыми числами
+// Console.Clear();
+// Console.WriteLine("Введите длину массива: ");
+// int length = ReadNumberFromConsole();
+// int[] array = new int[length];
+// NewArray(array);
+// Console.Write("Мы получили массив: ");
+// PrintArray(array);
+// int min = array[0];
+// int max = array[0];
+
+// for (int i = 0; i < array.Length; i++)   // завожу цикл для выявления max и min значений в массиве
+// {
+//   if (array[i] > max)
+//   {
+//     max = array[i];
+//   }
+//   if (array[i] < min)
+//   {
+//     min = array[i];
+//   }
+// }
+// Console.WriteLine($"Максимальное значение = {max}");
+// Console.WriteLine($"Минимальное значение = {min}");
+// Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
+
+// int ReadNumberFromConsole()   // метод для считывания данных из консоли
+// {
+//   string input = Console.ReadLine();
+//   return int.Parse(input);
+// }
+
+// void NewArray(int[] array)   //  метод для заполнения массива случайными числами
+// {
+//   for (int i = 0; i < array.Length; i++)
+//   {
+//     array[i] = new Random().Next(-999, 1000);
+//   }
+// }
+
+// void PrintArray(int[] array)   // метод для вывода на печать массива "красивый")
+{
+  Console.Write("[ ");
+  int count = array.Length;
+  int position = 0;
+  while (position < count - 1)
+  {
+    Console.Write($"{array[position]} | ");
+    position++;
+  }
+  Console.Write($"{array[position]} ]");
+  Console.WriteLine();
+}
